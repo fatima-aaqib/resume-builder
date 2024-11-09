@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Resume Builder by Fatima Tuz Zohra</h1>
+    </header>
+
+    <div class="container">
+        <!-- Form for user input -->
+        <div class="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="resumeForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="photo">Upload Your Photo:</label>
+                <input type="file" id="photo" accept="image/*" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                <label for="education">Education:</label>
+                <textarea id="education" placeholder="Enter your education details" required></textarea>
+
+                <label for="experience">Experience:</label>
+                <textarea id="experience" placeholder="Enter your work experience"></textarea>
+
+                <label for="skills">Skills (separate by commas):</label>
+                <input type="text" id="skills" placeholder="e.g., HTML, CSS, JavaScript">
+
+                <button type="button" onclick="generateResume()">Generate Resume</button>
+                <button type="button" onclick="downloadResume()">Download Resume as PDF</button>
+            </form>
+        </div>
+
+        <!-- Display Generated Resume -->
+        <div class="resume-section" id="resumeSection" style="display:none;">
+            <h2>Generated Resume</h2>
+            <div id="resumeOutput"></div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Created by Fatima Tuz Zohra | All Rights Reserved</p>
+    </footer>
+
+    <!-- Include html2pdf.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
